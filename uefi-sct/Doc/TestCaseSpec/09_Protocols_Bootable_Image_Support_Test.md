@@ -3575,6 +3575,52 @@ open-mode, the return status should be
 </tbody>
 </table>
 
+### OpenEx() Conformance
+
+**Reference Document:**
+
+*UEFI Specification*, EFI_FILE_PROTOCOL Section.
+
+*UEFI 2.10 Errata A*, Mantis 2368.
+
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 16%" />
+<col style="width: 28%" />
+<col style="width: 41%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Number</td>
+<td>GUID</td>
+<td>Assertion</td>
+<td>Test Description</td>
+</tr>
+<tr class="even">
+<td>5.7.3.12.1</td>
+<td>gSimpleFileSystemExConformanceTestAssertionGuid010</td>
+<td><strong>EFI_FILE_PROTOCOL.OpenEx</strong> –
+<strong>OpenEx()</strong> returns <strong>EFI_NO_MEDIA</strong>
+when the device has no medium.</td>
+<td><p>1. Call <strong>OpenVolume()</strong> — if it returns
+<strong>EFI_NO_MEDIA</strong>, that is a <strong>PASS</strong>
+(no-media condition confirmed at volume level).</p>
+<p>2. If <strong>OpenVolume</strong> succeeds, check for
+<strong>EFI_FILE_PROTOCOL_REVISION2</strong>.</p>
+<p>3. Call <strong>OpenEx()</strong> and check for
+<strong>EFI_NO_MEDIA</strong>.</p>
+<p>4. If media is present, record <strong>WARNING</strong>
+(the no-media condition cannot be exercised on this device).</p></td>
+</tr>
+</tbody>
+</table>
+
+**Note:** Checkpoints 1 and 2 of the existing OpenEx() function tests
+(5.7.3.11.x) were updated per Mantis 2368 to treat **EFI_NO_MEDIA** as
+a **WARNING** outcome, consistent with the handling already given to
+**EFI_MEDIA_CHANGED**, **EFI_WRITE_PROTECTED**, and **EFI_VOLUME_FULL**.
+
 
 ### ReadEx
 
