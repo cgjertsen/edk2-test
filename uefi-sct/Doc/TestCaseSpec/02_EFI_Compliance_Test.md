@@ -39,7 +39,7 @@ EFI Requirements Test Profile.
 <td><p>1. The <em>Signature</em> of EFI System Table should be
 0x5453595320494249.</p>
 <p>2. The <em>Revision</em> of EFI System Table should be equal to or
-larger than 0x00020000.</p>
+larger than EFI_2_00_SYSTEM_TABLE_REVISION (0x00020000).</p>
 <p>3. The <em>Reserved</em> field in EFI System Table should be 0.</p>
 <p>4. The <em>RuntimeServices</em> and <em>BootServices</em> pointers of
 EFI System Table should not be <strong>NULL</strong>.</p>
@@ -53,7 +53,7 @@ EFI System Table should not be <strong>NULL</strong>.</p>
 <td><p>1. The <em>Signature</em> of EFI Boot Services Table should be
 0x56524553544f4f42.</p>
 <p>2. The <em>Revision</em> of EFI Boot Services Table should be equal
-to or larger than 0x00020000.</p>
+to or larger than EFI_2_00_SYSTEM_TABLE_REVISION (0x00020000).</p>
 <p>3. The <em>Reserved</em> field in EFI Boot Services Table should be
 0.</p>
 <p>4. No function pointers in EFI Boot Services Table should be
@@ -67,7 +67,7 @@ to or larger than 0x00020000.</p>
 <td><p>1. The <em>Signature</em> of EFI Runtime Services Table should be
 0x56524553544e5552.</p>
 <p>2. The <em>Revision</em> of EFI Runtime Services Table should be
-equal to or larger than 0x00020000.</p>
+equal to or larger than EFI_2_00_SYSTEM_TABLE_REVISION (0x00020000).</p>
 <p>3. The <em>Reserved</em> field in EFI Runtime Services Table should
 be 0.</p>
 <p>4. No function pointers in EFI Runtime Services Table should be
