@@ -79,5 +79,18 @@ Spec</p></td>
 </td>
 <td>June 2024</td>
 </tr>
+<tr class="odd">
+<td>2025.05</td>
+<td><p>Updates for UEFI 2.8 – 2.10 Errata A test coverage:</p>
+<ul>
+<li>PR #320: OpenEx() EFI_NO_MEDIA conformance (Bootable Image Support)</li>
+<li>PR #346, #347: New chapter 33 – REST EX Protocol black-box tests (Mantis 1834, 1879, 1924)</li>
+<li>PR #348, #349: New chapter 34 – Redfish Discover Protocol black-box tests (Mantis 1920, 1925, 2172)</li>
+<li>PR #350: SerialIo DeviceTypeGuid test for revision 1.1 (Mantis 1832)</li>
+<li>PR #351: Symbolic constants for EFI system table version checks</li>
+<li>PR #352: AtaPassThru GetNextDevice dual behavior (Mantis 2359)</li>
+</ul></td>
+<td>May 2025</td>
+</tr>
 </tbody>
 </table>
